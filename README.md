@@ -38,8 +38,8 @@ The following image shows the web application's appearance and functionality:
 
 ## URL
 
-* The URL of the functional, deployed application: <>
-* The URL of the GitHub repository. Give the repository a unique name and include a readme describing the project: <>
+* The URL of the functional, deployed application: <https://mskippen.github.io/Weather-Dashboard/>
+* The URL of the GitHub repository. Give the repository a unique name and include a readme describing the project: <https://github.com/mskippen/Weather-Dashboard.git>
 
 - - -
 © 2021 Project Agents Pty Ltd. Confidential and Proprietary. All Rights Reserved.
