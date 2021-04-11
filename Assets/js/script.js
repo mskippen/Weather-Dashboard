@@ -3,7 +3,7 @@ var searchInput = document.querySelector("input")
 var currentWeatherContainer = document.querySelector(".details")
 var fiveDaysWeatherContainer = document.querySelector(".results-container")
 var searchHistoryContainer = document.querySelector(".search-history")
-var API_KEY = "58ee873c9d639e1c4a248c21a4188189"
+var API_KEY = "62782709d4613dd6c6e97112944f0625"
 
 
 function fetchCurrentWeather (url) {
@@ -26,7 +26,6 @@ function fetchCurrentWeather (url) {
 function showUVIndexColor () {
     var uvIndexSpan = document.querySelector("#uv-index")
     var uvIndex = Number(uvIndexSpan.textContent)
-    console.log(typeof uvIndex)
     
     if(uvIndex >= 0 && uvIndex < 2) {
         uvIndexSpan.classList.add("uv-green")
@@ -89,20 +88,53 @@ function fetchFiveDaysForecast (url) {
         return response.json()
     })
     .then(function(data) {
-        console.log(data)
         displayFiveDaysForecast(data)
     })
  
 }
 
+function saveToLocalStorage (name) {
+    var cityNameArr = []
+    if(localStorage.getItem("cityName") === null) {
+        cityNameArr = []
+    } else {
+        cityNameArr = JSON.parse(localStorage.getItem("cityName"))
+    }
+    cityNameArr.push(name)
+    localStorage.setItem("cityName", JSON.stringify(cityNameArr))
+}
+
 function fetchWeatherCondition (event) {
     event.preventDefault()
     var cityName = searchInput.value
+    saveToLocalStorage(cityName)
     var CURRENT_WEATHER_API = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`
     fetchCurrentWeather(CURRENT_WEATHER_API)
    
 }
 
+function fetchWeatherConditionsByHistory (event) {
+    var cityName = event.target.textContent;
+    var CURRENT_WEATHER_API = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`
+    fetchCurrentWeather(CURRENT_WEATHER_API)
+    console.log(cityName)
+}
+
+function displaySearchHistory () {
+    var searchHistory = JSON.parse(localStorage.getItem("cityName"))
+    searchHistoryContainer.innerHTML = ""
+    searchHistory?.forEach(function (item) {
+        var output = ""
+        output = `
+        <div class="search-item" onclick="fetchWeatherConditionsByHistory(event)">${item}</div>
+        `
+        searchHistoryContainer.innerHTML += output
+    })
+}
+
 form.addEventListener("submit", function(event) {
     fetchWeatherCondition(event)
+    displaySearchHistory()
 })
+
+window.addEventListener("load", displaySearchHistory())
