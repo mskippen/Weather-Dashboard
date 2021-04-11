@@ -48,7 +48,6 @@ button {
 }
 
 .details li span {
-    background-color: rgb(8, 247, 8); 
     padding: 3px 7px;
     border-radius: 4px;
 
@@ -73,4 +72,20 @@ article li:nth-child(1) {
 
 .results-container {
     margin-left: 5px;
+}
+
+.uv-green {
+    background-color: rgb(8, 247, 8);
+}
+
+.uv-yellow {
+    background-color: yellow;
+}
+
+.uv-orange {
+    background-color: orange;
+}
+
+.uv-red {
+    background-color: red;
 }
