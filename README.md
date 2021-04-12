@@ -35,10 +35,10 @@ THEN you are again presented with current and future conditions for that city
 The following image shows the web application's appearance and functionality:
 
 ![The weather app includes a search option, a list of cities, and a five-day forecast and current weather conditions for Atlanta.]
-<br>(Assets/images/Weather search by City final display.JPG)
-<br>(Assets/images/Coloured UV Index.JPG)
-<br>(Assets/images/Saves to local storage.JPG)
-<br>(Assets/images/Weather search by City final display.JPG)
+<br>(.Assets/images/Weather search by City final display.JPG)
+<br>(.Assets/images/Coloured UV Index.JPG)
+<br>(.Assets/images/Saves to local storage.JPG)
+<br>(.Assets/images/Weather search by City final display.JPG)
 
 ## URLs
 
