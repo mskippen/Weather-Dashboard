@@ -12,14 +12,14 @@ function fetchCurrentWeather (url) {
         return response.json()
     })
     .then(function(data) {
-        fetch(`https://api.openweathermap.org/data/2.5/uvi?lat=${data.coord.lat}&lon=${data.coord.lon}&appid=58ee873c9d639e1c4a248c21a4188189`)
+        fetch(`https://api.openweathermap.org/data/2.5/uvi?lat=${data.coord.lat}&lon=${data.coord.lon}&appid=62782709d4613dd6c6e97112944f0625`)
         .then(function(response) {
             return response.json()
         })
         .then(function(UV_data) {
             displayCurrentWeather(data, UV_data.value)
         })
-        fetchFiveDaysForecast( `https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&exclude={part}&appid=58ee873c9d639e1c4a248c21a4188189`)
+        fetchFiveDaysForecast( `https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&exclude={part}&appid=62782709d4613dd6c6e97112944f0625`)
     })
 }
 
