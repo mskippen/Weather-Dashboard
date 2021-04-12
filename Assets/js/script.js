@@ -12,14 +12,14 @@ function fetchCurrentWeather (url) {
         return response.json()
     })
     .then(function(data) {
-        fetch(`http://api.openweathermap.org/data/2.5/uvi?lat=${data.coord.lat}&lon=${data.coord.lon}&appid=58ee873c9d639e1c4a248c21a4188189`)
+        fetch(`https://api.openweathermap.org/data/2.5/uvi?lat=${data.coord.lat}&lon=${data.coord.lon}&appid=58ee873c9d639e1c4a248c21a4188189`)
         .then(function(response) {
             return response.json()
         })
         .then(function(UV_data) {
             displayCurrentWeather(data, UV_data.value)
         })
-        fetchFiveDaysForecast( `http://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&exclude={part}&appid=58ee873c9d639e1c4a248c21a4188189`)
+        fetchFiveDaysForecast( `https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&exclude={part}&appid=58ee873c9d639e1c4a248c21a4188189`)
     })
 }
 
@@ -41,7 +41,7 @@ function showUVIndexColor () {
 function displayCurrentWeather (data, UV_INDEX) {
     console.log(data)
     var iconcode = data.weather[0].icon
-    var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+    var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
     var time = data.dt;
     var newTime = moment.unix(time).format("DD/MM/YYYY")
     var output = ""
@@ -64,7 +64,7 @@ function displayFiveDaysForecast (data) {
     fiveDaysWeatherContainer.innerHTML = ""
     dailyData.forEach(function (item) {
         var iconcode = item.weather[0].icon
-        var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+        var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
         var time = item.dt;
         var newTime = moment.unix(time).format("DD/MM/YYYY")
         output = `
@@ -108,14 +108,14 @@ function fetchWeatherCondition (event) {
     event.preventDefault()
     var cityName = searchInput.value
     saveToLocalStorage(cityName)
-    var CURRENT_WEATHER_API = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`
+    var CURRENT_WEATHER_API = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`
     fetchCurrentWeather(CURRENT_WEATHER_API)
    
 }
 
 function fetchWeatherConditionsByHistory (event) {
     var cityName = event.target.textContent;
-    var CURRENT_WEATHER_API = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`
+    var CURRENT_WEATHER_API = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`
     fetchCurrentWeather(CURRENT_WEATHER_API)
     console.log(cityName)
 }
