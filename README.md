@@ -34,16 +34,19 @@ THEN you are again presented with current and future conditions for that city
 
 The following image shows the web application's appearance and functionality:
 
-![The weather app includes a search option, a list of cities, and a five-day forecast and current weather conditions for Atlanta.]
-<br>(./Assets/images/WeatherSearchByCity.JPG)
-<br>(./Assets/images/ColouredUVIndex.JPG)
-<br>(./Assets/images/SavesToLocalStorage.JPG)
-<br>(./Assets/images/WeatherSearchByCityFinalDisplay.JPG)
+![The weather app includes a search option by city.](./Assets/images/WeatherSearchByCity.JPG)
+
+![The weather app includes a five-day forecast and current weather conditions by city and highlights the UV index.](./Assets/images/ColouredUVIndex.JPG)
+
+![The weather app saves your previous City search to Local storage](./Assets/images/SavesToLocalStorage.JPG)
+
+![The weather app displays your previous City searches and allows you to easily access the weather for that city once again on click](./Assets/images/WeatherSearchByCityFinalDisplay.JPG)
 
 ## URLs
 
-* The URL of the functional, deployed application: <https://mskippen.github.io/Weather-Dashboard/>
-* The URL of the GitHub repository. Give the repository a unique name and include a readme describing the project: <https://github.com/mskippen/Weather-Dashboard.git>
+- The URL of the functional, deployed application: <https://mskippen.github.io/Weather-Dashboard/>
+- The URL of the GitHub repository. Give the repository a unique name and include a readme describing the project: <https://github.com/mskippen/Weather-Dashboard.git>
 
-- - -
+---
+
 © 2021 Project Agents Pty Ltd. Confidential and Proprietary. All Rights Reserved.
