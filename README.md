@@ -1,10 +1,10 @@
-# Weather Dashboard
+# Weather Dashboard App
 
-## Your Task******
+## This app
 
 Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Developers are often tasked with retrieving data from another application's API and using it in the context of their own. A weather dashboard has been built that will run in the browser and feature dynamically updated HTML and CSS.
 
-Make sure to read the [OpenWeather "How To Start" Guide](https://openweathermap.org/appid) before you get started. Use the [OpenWeather One Call API](https://openweathermap.org/api/one-call-api) to retrieve weather data for cities. Read through the documentation for setup and usage instructions. You will use `localStorage` to store any persistent data.
+This app has used the [OpenWeather One Call API](https://openweathermap.org/api/one-call-api) to retrieve weather data for cities. Local storage has been used `localStorage` to store any persistent data.
 
 ## User Story
 
@@ -34,9 +34,13 @@ THEN you are again presented with current and future conditions for that city
 
 The following image shows the web application's appearance and functionality:
 
-![The weather app includes a search option, a list of cities, and a five-day forecast and current weather conditions for Atlanta.](./Assets/06-server-side-apis-homework-demo.png)
+![The weather app includes a search option, a list of cities, and a five-day forecast and current weather conditions for Atlanta.]
+<br>(Assets/images/Weather search by City final display.JPG)
+<br>(Assets/images/Coloured UV Index.JPG)
+<br>(Assets/images/Saves to local storage.JPG)
+<br>(Assets/images/Weather search by City final display.JPG)
 
-## URL
+## URLs
 
 * The URL of the functional, deployed application: <https://mskippen.github.io/Weather-Dashboard/>
 * The URL of the GitHub repository. Give the repository a unique name and include a readme describing the project: <https://github.com/mskippen/Weather-Dashboard.git>
